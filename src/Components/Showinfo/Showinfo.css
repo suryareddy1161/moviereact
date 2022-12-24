@@ -1,0 +1,35 @@
+.left{
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin-top: 250px;
+    position: absolute;
+    left: 0;
+}
+.right{
+    margin-top: 250px;
+    padding-left: 50%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.showinfo{
+    position: absolute;
+    top: 460px;
+    display: flex;
+    justify-content: center;
+}
+.cardshow{
+    position: absolute;
+    top: 220px;
+    left: 0;
+    max-width: 1000%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40%;
+}
