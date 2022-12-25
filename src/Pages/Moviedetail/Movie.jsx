@@ -8,37 +8,41 @@ import Stars from '../../Components/Star/Star'
 import ShowInfo from '../../Components/Showinfo/ShowInfo'
 import Staring from '../../Components/Starring/Staring'
 const Movie = () => {
-    const [movie, setMovie] = useState({})
+    const [movie, setMovie] = useState([])
     const { id } = useParams()
-
 
     useEffect(() => {
         axios.get(`https://api.tvmaze.com/shows/${id}`).then((res) => {
-            //console.log(res.data)
-
             setMovie(res.data)
+            //console.log(responst.data)  
         })
     }, [])
-    console.log(movie)
+    //console.log(movie)
+
     return (
         <div>
             <div>
-                <div>
-                    <h1>TV Blade</h1>
+                <div className='cardc'>
+                    <h1> 🆃🆅  🅱🅻🅰🅽🅳</h1>
                 </div>
-                
             </div>
-            <div>
-                {
-                   Object.keys(movie).map((ele,id)=>{
-                    return(
+            <div className='detail'>
+                <div >
+                    <div className='cardm'>
                         <div>
-                            {/* <img src={movie[ele].image.medium}></img> */}
-                            <div>{movie[ele].name}</div>
+                            <img className='imgm' src={movie.image?.medium}></img>
+                            <div className='rating'><Stars stars={movie.rating?.average} /></div>
                         </div>
-                    )
-                   })
-                }
+                        <div >
+                            <div className='movien'>{movie.name}</div>
+                            <p className='moviep'>{movie.summary}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='gridmo'>
+                <Staring />
+                <ShowInfo />
             </div>
         </div>
     )

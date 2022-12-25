@@ -1,35 +1,66 @@
-.left{
-    height: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    margin-top: 250px;
-    position: absolute;
-    left: 0;
-}
-.right{
-    margin-top: 250px;
-    padding-left: 50%;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-}
 .showinfo{
     position: absolute;
-    top: 460px;
+    top: 100px;
     display: flex;
     justify-content: center;
 }
+.showinfo h1{
+    font-size: xx-large;
+}
 .cardshow{
-    position: absolute;
-    top: 220px;
-    left: 0;
-    max-width: 1000%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40%;
+     position: absolute;
+    top: 150px;
+
+}
+
+@media screen and (max-width:770px) {
+    .showinfo{
+        position: absolute;
+        top: 450px;
+        display: flex;
+        justify-content: center;
+    }
+    .showinfo h1{
+        font-size: xx-large;
+    }
+    .cardshow{
+         position: absolute;
+        top: 500px;
+        margin-left: 35px;
+    }
+}
+@media screen and (max-width:425px) {
+    .showinfo{
+        position: absolute;
+        top: 900px;
+        display: flex;
+        justify-content: center;
+        margin-left: 35px;
+    }
+    .showinfo h1{
+        font-size: xx-large;
+    }
+    .cardshow{
+         position: absolute;
+        top: 950px;
+        margin-left: 35px;
+    }
+}
+
+@media screen and (max-width:325px) {
+    .showinfo{
+        position: absolute;
+        top: 930px;
+        display: flex;
+        justify-content: center;
+        margin-left: 35px;
+    }
+    .showinfo h1{
+        font-size: xx-large;
+    }
+    .cardshow{
+         position: absolute;
+        top: 990px;
+        margin-left: 35px;
+    }
 }

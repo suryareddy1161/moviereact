@@ -15,6 +15,8 @@ const Show = () => {
     axios.get('https://api.tvmaze.com/shows').then((res) => {
       //console.log(res.data)
       setData(res.data)
+    }).catch((err) => {
+      console.log(err)
     })
   }, [])
   console.log(data)
@@ -28,27 +30,13 @@ const Show = () => {
 
   return (
     <div>
-      {/*    <Header/> */}
       <div className='containers'>
         <div>
           <h1> 🆃🆅  🅱🅻🅰🅽🅳 </h1>
-          {/*   <p>Tv Show and web series database.<br/>
-            Hear are Episode guide, Cast, Crew and<br/>
-            Character Information.</p> */}
-        </div>
-
-        <div className='btn' >
-        <img  className='btnprev' src={arrowLeft} onClick={() => handlePage("previous")} />
-         <span className='page'>Page = {page}</span>
-         <img className='btnnext' src={arrowRight} onClick={() => handlePage("next")} />
-          
-        
-       
-
         </div>
       </div>
       <div className='showcontainer'>
-        {/*  <h1>Last Added Shows</h1>  */}
+        <h1>Last Added Shows</h1>
         <div className='cardcontainer'>
 
           {
@@ -57,25 +45,26 @@ const Show = () => {
                 return (
                   <div key={id} >
                     <div className='showh'>
-                    <div className='card'>
-                      <Link to={`/movie/${item.id}`}><img className='img' src={item.image.medium}></img></Link>
-                      <Stars stars={item.rating.average} />
-                      <div className='name'>{item.name}</div>
-                    </div>
+                      <div className='card'>
+                        <Link to={`/movie/${item.id}`}><img className='img' src={item.image.medium}></img></Link>
+                        <Stars stars={item.rating.average} />
+                        <div className='name'>{item.name}</div>
+                      </div>
                     </div>
                   </div>
                 )
               }
-
             }
             )
           }
 
         </div>
-
-      
+        <div className='btn' >
+          <img className='btnprev' src={arrowLeft} onClick={() => handlePage("previous")} />
+          <span className='page'>Page - {page}</span>
+          <img className='btnnext' src={arrowRight} onClick={() => handlePage("next")} />
+        </div>
       </div>
-      {/* <div className='bar'></div>  */}
     </div>
   )
 }
