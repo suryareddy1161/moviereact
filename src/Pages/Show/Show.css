@@ -96,6 +96,18 @@
     .showcontainer h1 {
         margin-left: 15%;
     }
+    .btn {
+        background-color:white;
+      
+    }  
+    .btnnext {
+        padding-left: 170px;
+    }
+    
+    .page {
+        padding-left: 25%;
+        color: black;
+    }
 }
 
 @media screen and (max-width:425px) {
@@ -104,6 +116,19 @@
         grid-template-columns: auto auto;
         margin-left: 0%;
     }
+    .btnnext {
+        padding-left: 70px;
+    }
+    .btnprev{
+        padding-left: 18%;
+    }
+    .page {
+        padding-left: 25%;
+        color: black;
+    }
+
+}
+@media screen and (max-width:375px) {
 
 }
 
@@ -113,15 +138,20 @@
         grid-template-columns: auto;
         margin-left: 27%;
     }
-
-    .page {
-        left: 44%;
+    .btnnext{
+        padding-left: 30px;
     }
-
+    .btnprev{
+        padding-left: 70px;
+    }
+    .page{
+        padding-left: 20px;
+    }
     .showcontainer h1 {
         margin-left: 31%;
         font-size: larger;
     }
+   
 }
 
 @media screen and (max-width:320px) {

@@ -19,6 +19,9 @@ const Movie = () => {
     }, [])
     //console.log(movie)
 
+    const regex = /(<([^>]+)>)/ig;
+    const result = movie.summary?.replace(regex, '')
+    console.log(result)
     return (
         <div>
             <div>
@@ -35,7 +38,7 @@ const Movie = () => {
                         </div>
                         <div >
                             <div className='movien'>{movie.name}</div>
-                            <p className='moviep'>{movie.summary}</p>
+                            <p className='moviep' >{result} </p>
                         </div>
                     </div>
                 </div>
